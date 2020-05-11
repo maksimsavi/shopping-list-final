@@ -38,11 +38,10 @@ $(function() {
     $('ul').on('click', 'li .shopping-item-delete', function(event) {
       this.closest("li").remove();
     });
-    //check test
-    $('ul').on('click','li', function(event) {
-        event.stopPropagation();
-        //$('span.shopping-item').toggleClass('shopping-item__checked');
-        $('span.shopping-item').toggleClass('shopping-item__checked');
-      });
-   
+    //check slack help
+    $('ul').on('click', '.shopping-item-toggle', function(event) {
+        $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');// 
+    });
+    // where is the event happening??
+  
   });
